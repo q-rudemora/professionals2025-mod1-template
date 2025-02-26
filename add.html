@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новая жжизнь|Добавление информации о животном</title>
+    <link rel="stylesheet" href="./assets/app.css" />
+</head>
+<body>
+    <header class="header flex jcsb aic container">
+        <a href="./index.html" class="logo"><img src="./assets/iamges/logo.png" alt="Новая жизнь" /></a>
+        <nav class="navigation flex g-2">
+            <li><a href="./search.html">Поиск</a></li>
+            <li><a href="./register.html">Регистрация</a></li>
+            <li><a href="./login.html">Личный кабинет</a></li>
+            <li><a href="#">Добавить в избранное</a></li>
+            <li><a href="./index.html#reviews">Отзывы</a></li>
+        </nav>
+        <a class="burger"><img src="./assets/iamges/burger.png" alt=""></a>
+    </header>
+    <div class="auth-form-full-size flex aic jcc">
+        <form action="" class="flex col g-2">
+            <h1>Добавить информацию о животном</h1>
+            <input class="c-input" type="number" placeholder="Телефонный номер приюта" />
+            <input class="c-input" type="email" placeholder="Почта приюта" />
+            <input class="c-input" type="text" placeholder="Пароль" />
+            <input class="c-input" list="type-list" type="text" placeholder="Вид" />
+            <input class="c-input" type="file" name="" id="" multiple /> <!-- Я пока пропущу это потом необходимо вернуться!!!-->
+            <datalist id="type-list">
+                <option value="Вид 1"></option>
+                <option value="Вид 2"></option>
+                <option value="Вид 3"></option>
+                <option value="Вид 4"></option>
+            </datalist>
+            <div class="flex jcsb aic g-3">
+                <a href="" class="dotted">Восстановить пароль</a>
+                <a href="" class="button">Войти</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

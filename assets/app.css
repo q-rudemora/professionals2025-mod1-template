@@ -1,0 +1,270 @@
+/* Переменные */
+@import url(./fonts/stylesheet.css);
+:root {
+    --padding-cont: 10%;
+    --padding-block: 3% var(--padding-cont);
+}
+/* Обнуление стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: #333333;
+}
+nav, ul {
+    list-style: none;
+}
+input:not([type="checkbox"]) {
+    padding: .6rem 1rem;
+    width: 100%;
+    &:focus-visible {
+        outline: none;
+        border-color: #0006;
+    }
+}
+/* Заготовки для стилей */
+.flex {
+    display: flex;
+}
+.aic {
+    align-items: center;
+}
+.aifs {
+    align-items: flex-start;
+}
+.jcc {
+    justify-content: center;
+}
+.jcfe {
+    justify-content: flex-end;
+}
+.jcsb {
+    justify-content: space-between;
+}
+.col {
+    flex-direction: column;
+}
+.grid {
+    display: grid;
+}
+.dotted {
+    text-decoration: underline;
+}
+.gtc-3 {
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 960px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.jic {
+    justify-items: center;
+}
+.container {
+    padding: 0 var(--padding-cont);
+}
+.block, .form-block {
+    padding: var(--padding-block);
+    img, .content {
+        width: 40%;
+    }
+}
+.tag {
+    padding: .6rem 1.7rem;
+    background-color: #893476;
+    color: #f4f4f4;
+    border-radius: 999rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.button {
+    padding: .7rem 2rem;
+    background-color: rgb(66, 152, 116);
+    border: 1px solid #429874;
+    color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    &:hover {
+        background-color: inherit;
+        color: #429874;
+        
+    }
+}
+.g-1 {
+    gap: 1.25rem;
+}
+.g-2 {
+    gap: 2rem;
+}
+.g-3 {
+    gap: 3rem;
+}
+.tac {
+    text-align: center;
+}
+.dot {
+    --size: 1rem;
+    height: var(--size);
+    width: var(--size);
+    background-color: #ddd;
+    border-radius: 100%;
+    &.active {
+        background-color: #777;
+    }
+}
+.c-input {
+    border-radius: 999rem;
+    border: 2px solid #0003;
+    background-color: #fff3;
+}
+.card {
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid #0003;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px #0000;
+    transition: all .3s;
+    p.grey {
+        color: #999;
+    }
+    &:hover {
+        box-shadow: 0 0 5px #0005;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Главные стили */
+/* Шапка сайта */
+.header {
+    height: 80px;
+}
+
+
+/* Форма быстрого поиска */
+.form-block {
+    background-color: #a6f9d6;
+}
+
+
+
+.animals {
+    .card {
+        img {
+            width: 100%;
+            
+        }
+    }
+}
+.reviews {
+    .card {
+        img {
+            width: 50%;
+        }
+    }
+}
+.slider {
+    justify-content: flex-start;
+    overflow-x: hidden;
+    .card {
+        min-width: 30%;
+        width: 30%;
+        
+    }
+}
+.footer {
+    background-color: #444;
+    * {
+        color: #f4f4f4;
+    }
+    img {
+        width: 100% !important;
+    }
+}
+.burger {
+    display: none;
+    height: 30%;
+}
+
+/* login.html */
+.auth-form-full-size {
+    height: calc(100vh - 80px);
+    display: flex;
+    form {
+        max-width: 50%;
+    }
+    
+}
+/* Интерфейс, на котором будут отображаться ошибки в файле register.html */
+.ui {
+    position: absolute;
+    top: calc(2% + 80px);
+    right: 2%;
+    max-width: 30%;
+}
+/* Стилизация сообщения ошибки */
+.mes {
+    padding: 1rem;
+    border: 3px solid;
+    border-radius: 1rem;
+    color: #f4f4f4;
+    &.err {
+        background-color: #d55252dd;
+        border-color: #b90808;
+    }
+}
+.area {
+    border: 1px solid ;
+}
+/* Адаптив под разные устройства */
+@media(max-width: 960px) {
+    :root {
+        --padding-cont: 5%;
+    }
+    .ui {
+        max-width: 100%;
+    }
+    .tag {
+        font-size: .6rem !important;
+    }
+    .block, .form-block {
+        .content, img {
+            width: 100%;
+        }
+    }
+    .slider {
+        .card {
+            min-width: 60%;
+            width: 60%;
+        }
+    }
+    .responsive {
+        flex-direction: column !important;
+        gap: 2rem;
+    }
+    .footer {
+        flex-direction: column !important;
+        gap: 3rem;
+        img {
+            width: 10% !important;
+        }
+    }
+    .navigation {
+        display: none;
+    }
+    .burger {
+        display: flex;
+    }
+}
