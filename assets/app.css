@@ -22,7 +22,7 @@ nav, ul {
     list-style: none;
 }
 input:not([type="checkbox"]) {
-    padding: .6rem 1rem;
+   
     width: 100%;
     &:focus-visible {
         outline: none;
@@ -66,6 +66,12 @@ input:not([type="checkbox"]) {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+.gtc-2 {
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 .jic {
     justify-items: center;
 }
@@ -86,6 +92,10 @@ input:not([type="checkbox"]) {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.arch {
+    background-color: #eee;
+}
 .button {
     padding: .7rem 2rem;
     background-color: rgb(66, 152, 116);
@@ -98,7 +108,13 @@ input:not([type="checkbox"]) {
     &:hover {
         background-color: inherit;
         color: #429874;
-        
+    }
+    &.small {
+        padding: 0.3rem;
+        &.red {
+            background-color: #d55252dd;
+            border-color: #b90808;
+        }
     }
 }
 .g-1 {
@@ -124,11 +140,17 @@ input:not([type="checkbox"]) {
     }
 }
 .c-input {
-    border-radius: 999rem;
+    border-radius: 1rem;
+    padding: .6rem 1rem;
     border: 2px solid #0003;
     background-color: #fff3;
 }
+.info-user {
+    padding: 2rem;
+    border: 1px solid #0003;
+}
 .card {
+    background-color: #f4f4f4;
     width: 100%;
     padding: 2rem;
     border: 1px solid #0003;
@@ -164,7 +186,6 @@ input:not([type="checkbox"]) {
     .card {
         img {
             width: 100%;
-            
         }
     }
 }
@@ -200,10 +221,14 @@ input:not([type="checkbox"]) {
 
 /* login.html */
 .auth-form-full-size {
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     display: flex;
     form {
         max-width: 50%;
+
+        @media (max-width: 960px) {
+            width: 100%;
+        }
     }
     
 }

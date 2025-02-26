@@ -1,62 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новая жизнь|Личный кабинет модератора</title>
-    <link rel="stylesheet" href="./assets/app.css" />
-</head>
-<body>
-    <header class="header flex jcsb aic container">
-        <a href="./index.html" class="logo"><img src="./assets/iamges/logo.png" alt="Новая жизнь" /></a>
-        <nav class="navigation flex g-2">
-            <li><a href="./search.html">Поиск</a></li>
-            <li><a href="./register.html">Регистрация</a></li>
-            <li><a href="./login.html">Личный кабинет</a></li>
-            <li><a href="#">Добавить в избранное</a></li>
-            <li><a href="./index.html#reviews">Отзывы</a></li>
-        </nav>
-        <a class="burger"><img src="./assets/iamges/burger.png" alt=""></a>
-    </header>
-    <section class="block flex col g-2">
-        <div class="flex col g-2">
-            <div class="info-user flex col g-2">
-                <p><strong>ФИО:</strong> Фамилия Имя Отчество</p>
-                <div class="flex aic g-3">
-                    <p><strong>Номер телефона:</strong> 8 (800)123-45-67</p>
-                    <a href="" class="button">Изменить</a>
-                </div>
-                <div class="flex aic g-3">
-                    <p><strong>e-mail:</strong> mail@newlife.ru </p>
-                    <a href="" class="button">Изменить</a>
-                </div>
-                <p><strong>Дата регистрации на сайте:</strong> 2022-02-02</p>
-                <p><strong>Дней с регистрации:</strong> 2022</p>
-
-            </div>
-        
-            <div class="info-user flex col g-2">
-                <div class="header-sort flex g-2">
-                    <select name="status" class="c-input" id="">
-                        <option value="">По статусу</option>
-                        <option value="">По статусу</option>
-                        <option value="">По статусу</option>
-                        <option value="">По статусу</option>
-                    </select>
-                    <input type="date" class="c-input" />
-                    <input type="date" class="c-input" />
-                    <select name="status" class="c-input" id="">
-                        <option value="">По виду животного</option>
-                        <option value="">По виду животного</option>
-                        <option value="">По виду животного</option>
-                        <option value="">По виду животного</option>
-                    </select>
-                </div>
-                <h1>Все объявления</h1>
-
-
-                <div class="grid gtc-3 g-3">
+<div class="grid gtc-3 g-3">
                     <div class="card flex col jcsb g-2">
                         <div class="flex col g-1">
                             <img src="./assets/iamges/pet-card-2.jpg" alt="Здесь буит фоточка животного" />
@@ -349,23 +291,3 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer class="footer flex jcsb block">
-        <a href="./index.html#header" class="logo"><img src="./assets/iamges/logo-light.png" alt="Новая жизнь" /></a>
-
-        <div class="flex col g-2">
-            <p><strong>Номер телефона:</strong> 8 (800)123-45-67</p>
-            <p><strong>e-mail:</strong> mail@newlife.ru </p>
-        </div>
-
-        <nav class="flex col g-2">
-            <li><a href="./index.html#header">Главная</a></li>
-            <li><a href="./register.html">Регистрация</a></li>
-            <li><a href="./login.html">Авторизация</a></li>
-            <li><a href="./profile.html">Личный кабинет</a></li>
-        </nav>
-    </footer>
-</body>
-</html>

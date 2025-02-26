@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/app.css" />
 </head>
 <body>
-    <header class="header flex jcsb aic container">
+    <header class="header flex jcsb aic container" id="header">
         <a href="./index.html" class="logo"><img src="./assets/iamges/logo.png" alt="Новая жизнь" /></a>
         <nav class="navigation flex g-2">
             <li><a href="./search.html">Поиск</a></li>
@@ -46,7 +46,7 @@
         <h1>Быстрый поиск</h1>
         <form action="" class="flex g-2">
             <input class="c-input" type="text" placeholder="Поиск ппо породе животного" />
-            <a href="" class="button">Поиск</a>
+            <a href="./search.html" class="button">Поиск</a>
         </form>
     </section>
 
@@ -186,7 +186,7 @@
             </div>
             <div class="flex g-2">
                 <input class="c-input" type="number" placeholder="Возраст" />
-                <a href="" class="button">Поиск</a>
+                <a href="./search.html" class="button">Поиск</a>
             </div>
             <datalist id="type-list">
                 <option value="Вид 1"></option>
@@ -261,7 +261,7 @@
     </section>
 
     <footer class="footer flex jcsb block">
-        <a href="" class="logo"><img src="./assets/iamges/logo-light.png" alt="Новая жизнь" /></a>
+        <a href="./index.html#header" class="logo"><img src="./assets/iamges/logo-light.png" alt="Новая жизнь" /></a>
 
         <div class="flex col g-2">
             <p><strong>Номер телефона:</strong> 8 (800)123-45-67</p>
@@ -269,10 +269,10 @@
         </div>
 
         <nav class="flex col g-2">
-            <li><a href="">Главная</a></li>
-            <li><a href="">Регистрация</a></li>
-            <li><a href="">Авторизация</a></li>
-            <li><a href="">Личный кабинет</a></li>
+            <li><a href="./index.html#header">Главная</a></li>
+            <li><a href="./register.html">Регистрация</a></li>
+            <li><a href="./login.html">Авторизация</a></li>
+            <li><a href="./profile.html">Личный кабинет</a></li>
         </nav>
     </footer>
 </body>
