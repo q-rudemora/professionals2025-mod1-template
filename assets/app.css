@@ -253,6 +253,11 @@ input:not([type="checkbox"]) {
 .area {
     border: 1px solid ;
 }
+.pet-content {
+    .content {
+        min-width: 70% !important;
+    }
+}
 /* Адаптив под разные устройства */
 @media(max-width: 960px) {
     :root {
@@ -268,6 +273,10 @@ input:not([type="checkbox"]) {
         .content, img {
             width: 100%;
         }
+    }
+    .pet-content {
+        flex-direction: column;
+        gap: 2rem;
     }
     .slider {
         .card {
