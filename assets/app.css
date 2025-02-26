@@ -1,35 +1,16 @@
-/* Переменные */
+/* Подключение шрифтов */
 @import url(./fonts/stylesheet.css);
+/* Обнуление стилей */
+@import url(./reset.css);
+
+/* Переменные */
 :root {
     --padding-cont: 10%;
     --padding-block: 3% var(--padding-cont);
 }
-/* Обнуление стилей */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat';
-}
-html {
-    scroll-behavior: smooth;
-}
-a {
-    text-decoration: none;
-    color: #333333;
-}
-nav, ul {
-    list-style: none;
-}
-input:not([type="checkbox"]) {
-   
-    width: 100%;
-    &:focus-visible {
-        outline: none;
-        border-color: #0006;
-    }
-}
+
 /* Заготовки для стилей */
+/* ФЛЕКСЫ */
 .flex {
     display: flex;
 }
@@ -48,14 +29,18 @@ input:not([type="checkbox"]) {
 .jcsb {
     justify-content: space-between;
 }
+.jic {
+    justify-items: center;
+}
 .col {
     flex-direction: column;
 }
-.grid {
-    display: grid;
-}
 .dotted {
     text-decoration: underline;
+}
+/* ГРИДЫ */
+.grid {
+    display: grid;
 }
 .gtc-3 {
     grid-template-columns: repeat(3, 1fr);
@@ -72,18 +57,25 @@ input:not([type="checkbox"]) {
         grid-template-columns: repeat(1, 1fr);
     }
 }
-.jic {
-    justify-items: center;
-}
+
 .container {
     padding: 0 var(--padding-cont);
 }
 .block, .form-block {
     padding: var(--padding-block);
-    img, .content {
-        width: 40%;
-    }
 }
+.block img,
+.block .content,
+.form-block img,
+.form-block .content {
+    width: 40%;
+}
+
+.tac {
+    text-align: center;
+}
+
+/* Маленькие плашки которые определяют категории или статус питомцев */
 .tag {
     padding: .6rem 1.7rem;
     background-color: #893476;
@@ -93,42 +85,7 @@ input:not([type="checkbox"]) {
     text-transform: uppercase;
 }
 
-.arch {
-    background-color: #eee;
-}
-.button {
-    padding: .7rem 2rem;
-    background-color: rgb(66, 152, 116);
-    border: 1px solid #429874;
-    color: #f4f4f4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .3s;
-    &:hover {
-        background-color: inherit;
-        color: #429874;
-    }
-    &.small {
-        padding: 0.3rem;
-        &.red {
-            background-color: #d55252dd;
-            border-color: #b90808;
-        }
-    }
-}
-.g-1 {
-    gap: 1.25rem;
-}
-.g-2 {
-    gap: 2rem;
-}
-.g-3 {
-    gap: 3rem;
-}
-.tac {
-    text-align: center;
-}
+/* Стилизация точек для слайдена в блоке main.hero */
 .dot {
     --size: 1rem;
     height: var(--size);
@@ -139,12 +96,49 @@ input:not([type="checkbox"]) {
         background-color: #777;
     }
 }
+
+/* Стили для кнопок */
+.button {
+    padding: .7rem 2rem;
+    background-color: rgb(66, 152, 116);
+    border: 1px solid #429874;
+    color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+.button.small {
+    padding: 0.3rem;
+}
+.button.red {
+    background-color: #d55252dd;
+    border-color: #b90808;
+}
+.button:hover {
+    background-color: inherit;
+    color: #429874;
+}
+
+/* Поля для ввода */
 .c-input {
     border-radius: 1rem;
     padding: .6rem 1rem;
     border: 2px solid #0003;
     background-color: #fff3;
 }
+
+/* Отступы */
+.g-1 {
+    gap: 1.25rem;
+}
+.g-2 {
+    gap: 2rem;
+}
+.g-3 {
+    gap: 3rem;
+}
+
 .info-user {
     padding: 2rem;
     border: 1px solid #0003;
@@ -157,15 +151,20 @@ input:not([type="checkbox"]) {
     border-radius: 1rem;
     box-shadow: 0 0 5px #0000;
     transition: all .3s;
-    p.grey {
-        color: #999;
-    }
-    &:hover {
-        box-shadow: 0 0 5px #0005;
-    }
-    h2 {
-        font-size: 2rem;
-    }
+}
+.card h2 {
+    font-size: 2rem;
+}
+.card:hover {
+    box-shadow: 0 0 5px #0005;
+}
+.card p.grey {
+    color: #999;
+}
+
+/* Бэкграунд для архива */
+.arch {
+    background-color: #eee;
 }
 
 /* Главные стили */
@@ -174,63 +173,56 @@ input:not([type="checkbox"]) {
     height: 80px;
 }
 
-
 /* Форма быстрого поиска */
 .form-block {
     background-color: #a6f9d6;
 }
 
 
-
-.animals {
-    .card {
-        img {
-            width: 100%;
-        }
-    }
+.animals .card .img {
+    width: 100%;
 }
-.reviews {
-    .card {
-        img {
-            width: 50%;
-        }
-    }
+.reviews .card > img {
+    width: 50%;
 }
+/* Стили для слайдера */
 .slider {
     justify-content: flex-start;
     overflow-x: hidden;
-    .card {
-        min-width: 30%;
-        width: 30%;
-        
-    }
 }
+.slider .card {
+    min-width: 30%;
+    width: 30%;   
+}
+
+/* Подвал сайта */
 .footer {
     background-color: #444;
-    * {
-        color: #f4f4f4;
-    }
-    img {
-        width: 100% !important;
-    }
 }
+.footer * {
+    color: #f4f4f4;
+}
+.footer img {
+    width: 100% !important;
+}
+
+/* Дефолтные стили для бургер кнопки */
 .burger {
     display: none;
     height: 30%;
 }
 
-/* login.html */
+/* Блок центрующий форму (login.html, regisater.html) */
 .auth-form-full-size {
     min-height: calc(100vh - 80px);
     display: flex;
-    form {
-        max-width: 50%;
-
-        @media (max-width: 960px) {
-            width: 100%;
-        }
-    }
     
+}
+.auth-form-full-size form {
+    max-width: 50%;
+    @media (max-width: 960px) {
+        width: 100%;
+    }
 }
 /* Интерфейс, на котором будут отображаться ошибки в файле register.html */
 .ui {
@@ -239,29 +231,33 @@ input:not([type="checkbox"]) {
     right: 2%;
     max-width: 30%;
 }
-/* Стилизация сообщения ошибки */
+/* Стилизация сообщения сообщения */
 .mes {
     padding: 1rem;
     border: 3px solid;
     border-radius: 1rem;
     color: #f4f4f4;
-    &.err {
-        background-color: #d55252dd;
-        border-color: #b90808;
-    }
 }
-.area {
-    border: 1px solid ;
+/* (ОШИБКИ) */
+.mes.err {
+    background-color: #d55252dd;
+    border-color: #b90808;
 }
-.pet-content {
-    .content {
-        min-width: 70% !important;
-    }
+
+.pet-content .content {
+    min-width: 70% !important;
 }
+
 /* Адаптив под разные устройства */
 @media(max-width: 960px) {
     :root {
         --padding-cont: 5%;
+    }
+    .block img,
+    .block .content,
+    .form-block img,
+    .form-block .content {
+        width: 100%;
     }
     .ui {
         max-width: 100%;
@@ -269,20 +265,13 @@ input:not([type="checkbox"]) {
     .tag {
         font-size: .6rem !important;
     }
-    .block, .form-block {
-        .content, img {
-            width: 100%;
-        }
-    }
     .pet-content {
         flex-direction: column;
         gap: 2rem;
     }
-    .slider {
-        .card {
-            min-width: 60%;
-            width: 60%;
-        }
+    .slider .card {
+        min-width: 60%;
+        width: 60%;
     }
     .responsive {
         flex-direction: column !important;
@@ -291,14 +280,24 @@ input:not([type="checkbox"]) {
     .footer {
         flex-direction: column !important;
         gap: 3rem;
-        img {
-            width: 10% !important;
-        }
+    }
+    .footer img {
+        width: 10% !important;
     }
     .navigation {
         display: none;
     }
     .burger {
         display: flex;
+    }
+}
+
+@media(max-width: 768px) {
+    :root {
+        --padding-cont: 3%;
+    }
+    .header-sort {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
